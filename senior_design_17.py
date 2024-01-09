@@ -5,7 +5,7 @@ import datetime
 import certifi
 import os
 import requests
-
+# test comment push
 # Function to get latitude and longitude using Nominatim
 def get_lat_lon(location):
     base_url = "https://nominatim.openstreetmap.org/search"
