@@ -319,6 +319,7 @@ if st.button("Search my Events ", type="primary"):
         event_query = f"events on {formatted_date} in {location_input}"
         event_params = {
             "q": event_query,
+            "engine": "google_events",
             "api_key": "6f2ffa3e0da4d2ac0282279b256693f7615db7d0bb68b042a11547184850bb95",  # Replace with your SerpAPI key
             "num_results": 100  # Adjust the number of results as needed
         }
