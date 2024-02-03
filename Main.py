@@ -378,20 +378,6 @@ if st.button("Search my Events ", type="primary"):
         num_restaurants = 3                     # num of restaurants to randomly select and offer as suggestions
         
         itin_start_time = datetime.datetime.strptime(itin_start_time, '%I:%M %p')
-        
-        itineray_events, suggested_restaurants, event_results_WO_time_df = itinerary_generator( event_results_df, maps_results_df, num_events, num_restaurants, itin_start_time  )
-
-        # Display the randomized events
-        st.subheader("Randomly selected events:")
-        st.dataframe(itineray_events)
-
-        # Display events that are multiday, that DO NOT have times listed on the event pull.
-        st.subheader("Multi-day events and events that did not post times:")
-        st.dataframe(event_results_WO_time_df)
-
-        # Display the suggested restaurants
-        st.subheader("Randomly selected restaurants:")
-        st.dataframe(suggested_restaurants)
 
     except Exception as e:
         st.error(f"An error occurred: {e}")
