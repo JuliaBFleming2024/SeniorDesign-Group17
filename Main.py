@@ -32,7 +32,7 @@ def get_event_itinerary( event_results_df, num_events, itin_time):
         
         event_itinerary_df.reset_index(inplace=True, drop=True)
 
-        itin_time = event_itinerary_df['start_time'].iloc[-1]
+        itin_time = event_itinerary_df['end_time'].iloc[-1]
 
         mask = (event_results_df['start_time'] <= itin_time)
         event_results_df.drop(event_results_df[mask].index, inplace=True)
